@@ -7,10 +7,20 @@
       .then((response) => response.json())
       .then((jsonData) => {
         imageElement.src = jsonData.urls.full;    
-      });
-        $(document).ready(function(){
-        $(".unsplash").fadeIn(3000);
-        console.log('Checking');
-       })
+      })
+	  document.getElementById("unsplashImg").onload = fadeIn;        
+      function fadeIn() { 
+          var fade = document.getElementById("unsplashImg"); 
+          var opacity = 0; 
+          var intervalID = setInterval(function() { 
+        
+              if (opacity < 1) { 
+                  opacity = opacity + 0.01 
+                  fade.style.opacity = opacity; 
+              } else { 
+                  clearInterval(intervalID); 
+              } 
+          }, 15); 
+      } 
 
   </script>

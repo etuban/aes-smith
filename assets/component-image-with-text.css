@@ -335,11 +335,7 @@
   position: relative;
 }
 #unsplashImg {position:relative;top:50%; transform: translateY(-50%);}
- .unsplash { animation: fadeIn 5s;  }
- @keyframes fadeIn {
- 0% { opacity: 0; }
- 100% { opacity: 1; } 
-} 
+
 @media screen and (min-width: 750px) {
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
