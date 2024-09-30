@@ -1,0 +1,12 @@
+<img alt="" id="unsplashImg" width="760" loading="lazy">
+<script>
+
+    let getImg = 'https://api.unsplash.com/photos/random?client_id=g1OiNzLO12axZyrJPqglbScQy2vbpD6BtcqsDIpCcIo&orientation=portrait&query=shoes';
+    let imageElement = document.querySelector("#unsplashImg"); 
+    fetch(getImg)
+      .then((response) => response.json())
+      .then((jsonData) => {
+        imageElement.src = jsonData.urls.full;    
+      })
+  
+  </script>

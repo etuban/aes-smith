@@ -32,7 +32,7 @@
         "button"
       ],
       "settings": {
-         "image": "shopify://shop_images/new-balance-xc-72-1.jpg", 
+     /*    "image": "shopify://shop_images/new-balance-xc-72-1.jpg", */
         "height": "large",
         "desktop_image_width": "large",
         "layout": "image_first",
