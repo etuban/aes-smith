@@ -1,5 +1,4 @@
-<img  alt="Unsplash Image" id="unsplashImg" width="760" loading="lazy" style="display:none">
-
+<img alt="Unsplash image random" loading="lazy" id="unsplashImg"  class="unsplash">
 <script>
 
     let getImg = 'https://api.unsplash.com/photos/random?client_id=g1OiNzLO12axZyrJPqglbScQy2vbpD6BtcqsDIpCcIo&orientation=portrait&query=shoes';
@@ -9,8 +8,9 @@
       .then((jsonData) => {
         imageElement.src = jsonData.urls.full;    
       });
-	  $(document).ready(function(){
-		$("#unsplashImg").fadeIn(3000);
-	 });
-  
+        $(document).ready(function(){
+        $(".unsplash").fadeIn(3000);
+        console.log('Checking');
+       })
+
   </script>
