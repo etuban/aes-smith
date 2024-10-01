@@ -1,4 +1,4 @@
-<img alt="Unsplash image random" loading="lazy" id="unsplashImg"  class="unsplash">
+<img alt="Unsplash image random" loading="lazy" id="unsplashImg" class="preload">
 <script>
 
     let getImg = 'https://api.unsplash.com/photos/random?client_id=g1OiNzLO12axZyrJPqglbScQy2vbpD6BtcqsDIpCcIo&orientation=portrait&query=shoes';
@@ -8,19 +8,8 @@
       .then((jsonData) => {
         imageElement.src = jsonData.urls.full;    
       })
-	  document.getElementById("unsplashImg").onload = fadeIn;        
+      imageElement.onload = fadeIn;         
       function fadeIn() { 
-          var fade = document.getElementById("unsplashImg"); 
-          var opacity = 0; 
-          var intervalID = setInterval(function() { 
-        
-              if (opacity < 1) { 
-                  opacity = opacity + 0.01 
-                  fade.style.opacity = opacity; 
-              } else { 
-                  clearInterval(intervalID); 
-              } 
-          }, 15); 
+          imageElement.classList.add('fade-in');
       } 
-
   </script>
